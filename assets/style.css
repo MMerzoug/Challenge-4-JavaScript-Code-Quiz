@@ -1,3 +1,11 @@
-*{
+* {
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+#all_done {
+    display: none;
+}
+
+#highscores {
+    display: none;
 }

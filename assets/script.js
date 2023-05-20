@@ -1,5 +1,5 @@
-var container = document.getElementByID ("container");
-var startQuiz = document.getElementByID ("start_quiz");
+var container = document.getElementById ("container");
+var startQuiz = document.getElementById ("start_quiz");
 var timerHolder = document.getElementById("timer_holder");
 var scoreHolder = document.getElementById("score_holder");
 var questionContainer = document.getElementById("question_container");
@@ -11,3 +11,8 @@ var highScores = document.getElementById("highscores");
 var score = document.getElementById("score");
 var goBack = document.getElementById("go_back");
 var clearHighscores = document.getElementById("clear_highscores");
+
+document.getElementById("start_quiz").addEventListener("click", function(){
+    container.style.display = "none";
+});
+

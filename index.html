@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz</title>
-    <link rel="stylesheet" href="./assets/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Quiz</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <section id="container">
-        <h1>Coding Quiz Challenge</h1>
-        <h4>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</h4>
-        <button id="startQuiz">
-            Start Quiz
-        </button>
-    </section>
+  <section id="container">
+    <h1>Coding Quiz Challenge</h1>
+    <h4>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers
+      will penalize your score/time by 10 seconds!</h4>
+    <button id="start_quiz">
+      Start Quiz
+    </button>
+  </section>
 
-    <div id="timer_holder"></div>
-    <div id="score_holder"></div>
-    <div id="question_container"></div>
-    <div id="answer_container"></div>
+  <section id="timer_holder"></section>
+  <section id="score_holder"></section>
+  <section id="question_container"></section>
+  <section id="answer_container"></section>
 
-    <!-- <section>
+  <!-- <section>
       <h2>Commonly used data types DO NOT include:</h2>  
       <ul>
         <li> 1. strings</li>
@@ -80,25 +82,23 @@
         </ul>
       </section> -->
 
-      <form id="all_done">
-        <h2>All done!</h2>
-        <p>Your final score is ______.</p>
-        <p>Enter Initials:</p><input type="text" id="initials" placeholder="" />
-        <button id="submit">Submit</button>
-      </form>
+  <form id="all_done">
+    <h2>All done!</h2>
+    <p>Your final score is ______.</p>
+    <p>Enter Initials:</p><input type="text" id="initials" placeholder="" />
+    <button id="submit">Submit</button>
+  </form>
 
-      <form id="highscores">
-        <h2>Highscores</h2>
-        <input type="text" id="score" placeholder="" />
-        <button id="go_back">
-            Go Back
-        </button>
-        <button id="clear_highscores">
-            Clear Highscores
-        </button>
-      </form>
+  <form id="highscores">
+    <h2>Highscores</h2>
+    <input type="text" id="score" placeholder="" />
+    <button id="go_back">
+      Go Back
+    </button>
+    <button id="clear_highscores">
+      Clear Highscores
+    </button>
+  </form>
 
-    <script src="./assets/script.js"></script>    
+  <script src="./assets/script.js"></script>
 </body>
-
-
