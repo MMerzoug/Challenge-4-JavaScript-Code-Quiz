@@ -15,15 +15,32 @@ button {
     color: rgb(255, 255, 255);
     background-color: rgb(99, 43, 149);
     border: none;
-    border-radius: 20%;
-    font-size: 75%;
-    padding: 12px;
+    border-radius: 11%;
+    font-size: 85%;
+    padding: 10px;
+
 }
+
+#start_quiz {
+    position:absolute;
+    top:32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 h1 {
     display:flex;
     justify-content: center;
     flex: 1 0 auto;
 }
+
+h3 {
+    position:absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 #quiz_box,
 #all_done,
