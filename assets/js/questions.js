@@ -1,3 +1,4 @@
+//Array holding the questions ( being objects). Array [] Object{}
 let questions = [
     {
         number: 1,
