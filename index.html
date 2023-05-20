@@ -17,15 +17,69 @@
     <h1>Coding Quiz Challenge</h1>
     <h4>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers
       will penalize your score/time by 10 seconds!</h4>
+    <!--Start quiz button-->
     <button id="start_quiz">
       Start Quiz
     </button>
   </section>
 
-  <section id="timer_holder"></section>
-  <section id="score_holder"></section>
+  <!--Quiz Boz-->
+  <section id="quiz_box">
+    <header>
+      <section id="title">
+        <h2>Code Quiz</h2>
+      </section>
+      <section id="timer_holder">
+        <section id="time_left">Time Left</section>
+        <section id="timer_sec">30</section>
+      </section>
+      <section id="time_line"></section>
+    </header>
 
-  <section id="question_container_1">
+    <section>
+      <section id="que_text">
+        <!--Insert questions from JavaScript-->
+        <section id="option_list">
+          <!--Insert choices from JavaScript-->
+        </section>
+      </section>
+
+      <!--Footer of Quiz Box-->
+      <footer>
+        <section id="total_que"></section>
+        <!--Insert question count from JavaScript-->
+        <button id="next_button">Next Question</button>
+      </footer>
+
+      <section id="score_holder"></section>
+
+      <form id="all_done">
+        <h2>All done!</h2>
+        <p>Your final score is ______.</p>
+        <p>Enter Initials:</p><input type="text" id="initials" placeholder="" />
+        <button id="submit">Submit</button>
+      </form>
+
+      <form id="highscores">
+        <h2>Highscores</h2>
+        <input type="text" id="score" placeholder="" />
+        <button id="go_back">
+          Go Back
+        </button>
+        <button id="clear_highscores">
+          Clear Highscores
+        </button>
+      </form>
+
+      <section id="buttons">
+        <button id="restart">Try Again</button>
+        <button id="end">End Quiz</button>
+      </section>
+    </section>
+    <script src="./assets/script.js"></script>
+</body>
+
+<!-- <section id="question_container_1">
     <h2>Commonly used data types DO NOT include:</h2>  
     <ul>
       <ul> 1. strings</ul>
@@ -45,9 +99,9 @@
         </ul>
   </section>
 
-  <section id="answer_container"></section>
+  <section id="answer_container"></section> -->
 
-  <!-- 
+<!-- 
       <section>
         <h2>Arrays in JavaScript can be used to store ______.</h2>  
         <ul>
@@ -84,24 +138,3 @@
           <li> 4. console log</li>
         </ul>
       </section> -->
-
-  <form id="all_done">
-    <h2>All done!</h2>
-    <p>Your final score is ______.</p>
-    <p>Enter Initials:</p><input type="text" id="initials" placeholder="" />
-    <button id="submit">Submit</button>
-  </form>
-
-  <form id="highscores">
-    <h2>Highscores</h2>
-    <input type="text" id="score" placeholder="" />
-    <button id="go_back">
-      Go Back
-    </button>
-    <button id="clear_highscores">
-      Clear Highscores
-    </button>
-  </form>
-
-  <script src="./assets/script.js"></script>
-</body>

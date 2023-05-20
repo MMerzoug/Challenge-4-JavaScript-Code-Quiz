@@ -2,10 +2,32 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#question_container_1,
-#question_container_2,
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+::selection{
+    color: rgb(99, 43, 149);
+    background-color:rgb(255, 255, 255) ;
+}
+
+button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 43, 149);
+    border: none;
+    border-radius: 20%;
+    font-size: 75%;
+    padding: 12px;
+}
+h1 {
+    display:flex;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+#quiz_box,
 #all_done,
 #highscores
  {
-    display: none;
+    display:none;
 }
