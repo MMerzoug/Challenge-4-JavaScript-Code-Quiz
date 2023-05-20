@@ -2,10 +2,10 @@
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#all_done {
-    display: none;
-}
-
-#highscores {
+#question_container_1,
+#question_container_2,
+#all_done,
+#highscores
+ {
     display: none;
 }
