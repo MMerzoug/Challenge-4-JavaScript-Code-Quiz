@@ -5,7 +5,6 @@ var title = document.getElementById("title");
 var timerHolder = document.getElementById("timer_holder");
 var timeLeft = document.getElementById("time_left");
 var timerSec = document.getElementById("timer_sec");
-var timeLine = document.getElementById("time_line");
 var queText = document.getElementById("que_text");
 var optionList = document.getElementById("option_list");
 var totalQue = document.getElementById("total_que");
