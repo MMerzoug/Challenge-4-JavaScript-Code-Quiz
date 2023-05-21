@@ -24,6 +24,7 @@ var end = document.getElementById("end");
 var current_question = document.getElementById("current_question");
 var clear_content = document.getElementById("clear_content");
 
+
 //Global variables should be positioned towards the top of the document because they can be used anywhere
 let timeValue = 30;
 let que_count = 0;
@@ -43,38 +44,44 @@ document.getElementById("start_quiz").addEventListener("click", function () {
   // startTimerLine(0);
 });
 
-console.log(questions[0].question);
-
-//Show questions
-function showQuestions() {//Defining the function, telling the browser how to show the questions
-  current_question.textContent = questions[que_count].question;//find a way to empty the options using text content or inner html
-  for (let i = 0; i < questions[que_count].options.length; i++) {
-    console.log(questions[que_count].options[i]);
-    var newButton = document.createElement("button");
-    newButton.textContent = questions[que_count].options[i];
-    newButton.onclick = function () {
-      nextQuestion();
-    }
-    //Add options to questions
-    optionList.appendChild(newButton);
-
-    // function clearContent() {
-    //   document.getElementById(option_list).innerHTML = "";
-    //   div.replaceChildren();
-  }
-
-  //add an onclick listener... How to add onclick funtions... not add event listener
+function setNextQuestion() {
+  resetState();
 }
 
+console.log(questions[0].question);
 
+function showQuestions() {
+  current_question.textContent = questions[que_count].question;
 
+  // Remove previous options
+  while (optionList.firstChild) {
+    optionList.removeChild(optionList.firstChild);
+  }
+
+  for (let i = 0; i < questions[que_count].options.length; i++) {
+    var newButton = document.createElement("button");
+    newButton.textContent = questions[que_count].options[i];
+
+    newButton.onclick = function () {
+      var answer = questions[que_count].answer;
+      nextQuestion();
+
+      if (newButton.dataset.correct) {
+        newButton.dataset.correct = answer === i;
+      }
+
+      newButton.addEventListener("click", selectAnswer);
+    };
+
+    optionList.appendChild(newButton);
+  }
+}
 
 //Next Question... Look up
 function nextQuestion() {
   que_count++;
   showQuestions();
 }
-
 
 //All done. Enter Initials. Show Score
 
