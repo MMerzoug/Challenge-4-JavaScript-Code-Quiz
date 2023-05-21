@@ -58,14 +58,14 @@ function showQuestions() {//Defining the function, telling the browser how to sh
     }
     //Add options to questions
     optionList.appendChild(newButton);
-    
+
     // function clearContent() {
     //   document.getElementById(option_list).innerHTML = "";
     //   div.replaceChildren();
-    }
-
-    //add an onclick listener... How to add onclick funtions... not add event listener
   }
+
+  //add an onclick listener... How to add onclick funtions... not add event listener
+}
 
 
 
