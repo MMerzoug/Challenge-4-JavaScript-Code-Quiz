@@ -62,17 +62,17 @@ function showQuestions() {
     var newButton = document.createElement("button");
     newButton.textContent = questions[que_count].options[i];
 
-    newButton.onclick = function () {
+    // use addEventListener
+    newButton.onclick = function() {
       var answer = questions[que_count].answer;
-      nextQuestion();
 
-      if (newButton.dataset.correct) {
-        newButton.dataset.correct = answer === i;
+      // check if answer is correct
+      if (newButton.textContent !== answer) {
+        // decrement time
+        timeValue -= 10;
       }
-
-      newButton.addEventListener("click", selectAnswer);
+      nextQuestion();
     };
-
     optionList.appendChild(newButton);
   }
 }
@@ -81,6 +81,7 @@ function showQuestions() {
 function nextQuestion() {
   que_count++;
   showQuestions();
+  //What to do after ..
 }
 
 //All done. Enter Initials. Show Score
