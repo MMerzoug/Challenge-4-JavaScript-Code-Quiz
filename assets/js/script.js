@@ -38,15 +38,21 @@ let widthValue = 0;
 document.getElementById("start_quiz").addEventListener("click", function () {
   container.style.display = "none";
   quiz_box.style.display = "block";
+  timeInterval= setInterval (function (){
+    timeValue= timeValue-1
+    timer_sec.textContent= timeValue
+    if (timeValue <= 0){
+      clearInterval(timeInterval)
+    } 
+  }, 1000)
+
   showQuestions();
-  // queCounter(1);
-  // startTimer(30);
-  // startTimerLine(0);
+  allDone ();
 });
 
-function setNextQuestion() {
-  resetState();
-}
+// function setNextQuestion() {
+//   resetState();
+// }
 
 console.log(questions[0].question);
 
@@ -75,6 +81,10 @@ function showQuestions() {
     };
     optionList.appendChild(newButton);
   }
+}
+
+function allDone() {
+
 }
 
 //Next Question... Look up
