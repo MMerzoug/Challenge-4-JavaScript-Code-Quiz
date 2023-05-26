@@ -40,24 +40,39 @@ document.getElementById("start_quiz").addEventListener("click", function () {
   quiz_box.style.display = "block";
   
   timeInterval= setInterval (function (){
-    timeValue= timeValue-1;
+    timeValue= timeValue -1;
     timer_sec.textContent= timeValue;
-    if (timeValue <= 0) {
+    if (timeValue < 1) {
       // Handle the time-up scenario
-      clearInterval(counter);
-      timeValue = 30; // Reset the time value
-      que_count = 0; // Reset the question count
-      showQuestions(); // Restart the quiz
+      clearInterval(timeInterval);//Reset back to zero
+      // if statement= timer display zero
+      //allDone ();
+
+
+
+
+
+      // timeValue = 30; // Reset the time value
+      // que_count = 0; // Reset the question count
+   // Restart the quiz
+    // } else {
+    //   clearInterval(counter);
+    //   clearInterval (counterLine);
+    //   showResult();
     }
   }, 1000)
 
   showQuestions();
-
+  allDone();
 });
 
 function setNextQuestion() {
   resetState();
 }
+
+// var allDone= JSON.parse
+// (localStorage.getItem("all_done").stingify);
+// if (!)
 
 console.log(questions[0].question);
 
@@ -78,7 +93,7 @@ function showQuestions() {
       var answer = questions[que_count].answer;
 
       // check if answer is correct
-      if (newButton.textContent === answer) {
+      if (newButton.textContent !== answer) {
         // decrement time
         timeValue -= 10;
       }
@@ -92,9 +107,14 @@ function showQuestions() {
 function nextQuestion() {
   que_count++;
   showQuestions();
+  allDone ();
   //What to do after ..
 }
 
 //All done. Enter Initials. Show Score
+function allDone(){
+  quizBox.style.display = "none";
+  allDone.style.display = "block"; 
+}
 
 //highscores
