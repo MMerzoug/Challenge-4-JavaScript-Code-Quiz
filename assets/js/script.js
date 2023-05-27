@@ -23,10 +23,11 @@ var restart = document.getElementById("restart");
 var end = document.getElementById("end");
 var current_question = document.getElementById("current_question");
 var clear_content = document.getElementById("clear_content");
-
+var finalScore = document.getElementById("final_score");
+var score = 0;
 
 //Global variables should be positioned towards the top of the document because they can be used anywhere
-let timeValue = 30;
+let timeValue = 3000;
 let que_count = 0;
 let que_numb = 1;
 let userScore = 0;
@@ -34,37 +35,16 @@ let counter;
 let counterLine;
 let widthValue = 0;
 
-//When button is clicked, container will disappear and quiz box will appear
-document.getElementById("start_quiz").addEventListener("click", function () {
-  container.style.display = "none";
-  quiz_box.style.display = "block";
-  
-  timeInterval= setInterval (function (){
-    timeValue= timeValue -1;
-    timer_sec.textContent= timeValue;
-    if (timeValue < 1) {
-      // Handle the time-up scenario
-      clearInterval(timeInterval);//Reset back to zero
-      // if statement= timer display zero
-      //allDone ();
-
-
-
-
-
-      // timeValue = 30; // Reset the time value
-      // que_count = 0; // Reset the question count
-   // Restart the quiz
-    // } else {
-    //   clearInterval(counter);
-    //   clearInterval (counterLine);
-    //   showResult();
-    }
-  }, 1000)
-
-  showQuestions();
-  allDone();
-});
+//highscores
+// local Storage stuff
+//Cannot have the dsame name for a function and a variable
+//All done. Enter Initials. Show Score
+// Add function to the score element from finslScore
+function moveOn(){
+  quizBox.style.display = "none";
+  allDone.style.display = "block"; 
+  finalScore.textContent= "Your final score is " + score;
+}
 
 function setNextQuestion() {
   resetState();
@@ -89,14 +69,22 @@ function showQuestions() {
     newButton.textContent = questions[que_count].options[i];
 
     // use addEventListener
-    newButton.onclick = function() {
+    optionList.onclick = function(event) {
+      event.preventDefault()
       var answer = questions[que_count].answer;
+    console.log (event.target.textContent);
 
       // check if answer is correct
-      if (newButton.textContent !== answer) {
+      if (event.target.textContent !== answer) {
         // decrement time
         timeValue -= 10;
+      if (timeValue <=0){
+        clearInterval(timeInterval);
+        moveOn ();
       }
+      }else {
+        score = score + 10;
+      } 
       nextQuestion();
     };
     optionList.appendChild(newButton);
@@ -107,14 +95,27 @@ function showQuestions() {
 function nextQuestion() {
   que_count++;
   showQuestions();
-  allDone ();
-  //What to do after ..
+  if (que_count >=4){
+    moveOn ();
+}
 }
 
-//All done. Enter Initials. Show Score
-function allDone(){
-  quizBox.style.display = "none";
-  allDone.style.display = "block"; 
-}
+//When button is clicked, container will disappear and quiz box will appear
+document.getElementById("start_quiz").addEventListener("click", function () {
+  container.style.display = "none";
+  quiz_box.style.display = "block";
+  
 
-//highscores
+  timeInterval= setInterval (function (){
+    timeValue= timeValue -1;
+    //If time value is greater than 0 it passes the test
+    if (timeValue < 0) {
+      // Handle the time-up scenario
+      clearInterval(timeInterval);//Reset back to zero
+      moveOn ();
+    }
+    //Then if passed test, display time value on the scrren
+    timer_sec.textContent= timeValue;
+  }, 1000)
+  showQuestions();
+});
