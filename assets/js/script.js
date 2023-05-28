@@ -25,25 +25,35 @@ var current_question = document.getElementById("current_question");
 var clear_content = document.getElementById("clear_content");
 var finalScore = document.getElementById("final_score");
 var score = 0;
+var allScores= document.getElementById("all_scores");
 
 //Global variables should be positioned towards the top of the document because they can be used anywhere
-let timeValue = 3000;
+let timeValue = 90;
 let que_count = 0;
 let que_numb = 1;
-let userScore = 0;
 let counter;
 let counterLine;
 let widthValue = 0;
 
 //highscores
-// local Storage stuff
-//Cannot have the dsame name for a function and a variable
-//All done. Enter Initials. Show Score
 // Add function to the score element from finslScore
+// local Storage stuff
+document.getElementById("submit").addEventListener("click", function() {
+  allDone.style.display = "none";
+  highscores.style.display = "block";
+  // allScores.textContent= local
+});
+
+console.log (highscores);
+
+//Cannot have the same name for a function and a variable
+//All done. Enter Initials. Show Score
 function moveOn(){
   quizBox.style.display = "none";
   allDone.style.display = "block"; 
   finalScore.textContent= "Your final score is " + score;
+  finalScore= [];
+  localStorage.setItem('score', JSON.stringify(scoreArray));
 }
 
 function setNextQuestion() {
