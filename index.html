@@ -17,13 +17,9 @@
     <h1>Coding Quiz Challenge</h1>
     <h3>Try to answer the following code related questions within the time limit. Keep in mind that incorrect answers
       will penalize your score/time by 10 seconds!</h3>
-    <!--Start quiz button-->
-    <button id="start_quiz">
-      Start Quiz
-    </button>
+    <button id="start_quiz">Start Quiz</button>
   </section>
 
-  <!--Quiz Boz-->
   <section id="quiz_box">
     <header>
       <section id="title">
@@ -37,19 +33,12 @@
 
     <section>
       <section id="que_text">
-        <!--Insert questions from JavaScript-->
         <h1 id="current_question"></h1>
-        <section id="option_list">
-          <!--Insert choices from JavaScript-->
-        </section>
+        <section id="option_list"></section>
       </section>
 
-
-      <!--Footer of Quiz Box-->
       <footer>
         <section id="total_que"></section>
-        <!--Insert question count from JavaScript-->
-        <!-- <button id="next_button">Next Question</button> -->
         <section id="buttons">
           <button id="restart">Try Again</button>
           <button id="end">End Quiz</button>
@@ -57,30 +46,25 @@
       </footer>
     </section>
   </section>
-<!--End Quiz Box-->
 
   <section id="score_holder"></section>
   <form id="all_done">
     <h2>All done!</h2>
     <p id="final_score">Your final score is ______.</p>
-    <p>Enter Initials:</p><input type="text" id="initials" placeholder="" />
+    <p>Enter Initials:</p>
+    <input type="text" id="initials" placeholder="" />
     <button id="submit">Submit</button>
   </form>
-  </section>
 
-  <form id="highscores">
+  <form id="highScores">
     <h2>Highscores</h2>
-    <input type="text" id="all_scores" placeholder="" />
-    <button id="go_back">
-      Go Back
-    </button>
-    <button id="clear_highscores">
-      Clear Highscores
-    </button>
+    <p id="all_scores" type="text"></p>
+    <button id="go_back">Go Back</button>
+    <button id="clear_highscores">Clear Highscores</button>
   </form>
-  </section>
 
   <script src="./assets/js/questions.js"></script>
   <script src="./assets/js/script.js"></script>
 
 </body>
+</html>

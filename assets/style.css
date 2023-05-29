@@ -1,3 +1,4 @@
+/* This applies styles to every element on the page and their pseudo-elements.  */
 *,
 *::before,
 *::after {
@@ -15,12 +16,12 @@ body {
     justify-content: center;
     align-items: center;
 }
-/* Double colon before will apply to all selection */
+/* changes the color of the text and background color when you select */
 ::selection {
     color: rgb(177, 130, 219);
     background-color: rgb(255, 255, 255);
 }
-
+/* Styles for all button elements */
 button {
     color: rgb(255, 255, 255);
     background-color: rgb(99, 43, 149);
@@ -59,7 +60,7 @@ h3 {
 
 #quiz_box,
 #all_done,
-#highscores {
+#highScores {
     display: none;
 }
 
