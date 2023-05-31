@@ -28,23 +28,40 @@ button {
     border: none;
     border-radius: 10%;
     font-size: 150%;
-    padding: 15px;
+    padding: 25px;
+    display: inline-flex;
+    justify-content: center;
+    flex: 1 0 auto;
+    margin-right: 8px;
 }
 
 button:hover {
     color: rgb(255, 255, 255);
     background-color: rgb(177, 130, 219);  
 }
+
 #start_quiz {
     display: flex;
     justify-content: center;
     align-items: center;  
-    /* display: grid; */
-/* margin:40%; */
+    margin-left: 40%;
 }
 
-h1 {
+#restart,
+#end {
+flex: none;
+margin-right: 15px;
+}
+
+#buttons {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+h1 {
+    display: inline-flex;
     justify-content: center;
     flex: 1 0 auto;
     font-size: 250%;
@@ -64,6 +81,9 @@ h3 {
     display: none;
 }
 
+#all_done,
+#highScores,
+#quiz_box,
 #container {
     width: 80%;
     height: 400px;
@@ -73,4 +93,6 @@ h3 {
     box-shadow: 0 0 10px 2px;
     margin: 25%;
     flex: 1 0 auto;
+    
 }
+
