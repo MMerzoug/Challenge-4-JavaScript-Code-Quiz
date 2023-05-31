@@ -54,6 +54,7 @@ function nextQuestion() {
   que_count++;
   if (que_count >= questions.length) {
     moveOn();
+    clearInterval(timeInterval);
   } else {
     showQuestions();
   }

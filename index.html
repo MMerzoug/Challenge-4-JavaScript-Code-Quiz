@@ -26,8 +26,8 @@
         <h2>Code Quiz</h2>
       </section>
       <section id="timer_holder">
-        <section id="time_left">Time Left</section>
-        <section id="timer_sec">90</section>
+        <h4 id="time_left">Time Left</h4>
+        <h4 id="timer_sec">90</h4>
       </section>
     </header>
 
@@ -51,7 +51,7 @@
   <form id="all_done">
     <h2>All done!</h2>
     <p id="final_score">Your final score is ______.</p>
-    <p>Enter Initials:</p>
+    <p id="final_score">Enter Initials:</p>
     <input type="text" id="initials" placeholder="" />
     <button id="submit">Submit</button>
   </form>
@@ -59,12 +59,15 @@
   <form id="highScores">
     <h2>Highscores</h2>
     <p id="all_scores" type="text"></p>
-    <button id="go_back">Go Back</button>
-    <button id="clear_highscores">Clear Highscores</button>
+    <section id="buttons">
+      <button id="go_back">Go Back</button>
+      <button id="clear_highscores">Clear Highscores</button>
+    </section>
   </form>
 
   <script src="./assets/js/questions.js"></script>
   <script src="./assets/js/script.js"></script>
 
 </body>
+
 </html>

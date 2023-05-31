@@ -16,11 +16,13 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 /* changes the color of the text and background color when you select */
 ::selection {
     color: rgb(177, 130, 219);
     background-color: rgb(255, 255, 255);
 }
+
 /* Styles for all button elements */
 button {
     color: rgb(255, 255, 255);
@@ -37,34 +39,48 @@ button {
 
 button:hover {
     color: rgb(255, 255, 255);
-    background-color: rgb(177, 130, 219);  
+    background-color: rgb(177, 130, 219);
 }
 
 #start_quiz {
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     margin-left: 40%;
 }
 
+#submit,
+#go_back,
+#clear_highscores,
 #restart,
 #end {
-flex: none;
-margin-right: 15px;
+    flex: none;
+    margin-right: 15px;
 }
 
+#all_scores,
 #buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
-  }
-  
-h1 {
+}
+
+#all_scores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+h1,
+h2 {
     display: inline-flex;
     justify-content: center;
     flex: 1 0 auto;
     font-size: 250%;
+    margin-left: 10px;
+    padding: 0;
 }
 
 h3 {
@@ -73,6 +89,16 @@ h3 {
     padding: 3%;
     font-size: 150%;
     flex: 1 0 auto;
+}
+
+#option_list,
+h4{
+    font-size: 125%; 
+    margin-left: 10px;  
+}
+
+#option_list {
+    padding-bottom: 20px;  
 }
 
 #quiz_box,
@@ -86,13 +112,25 @@ h3 {
 #quiz_box,
 #container {
     width: 80%;
-    height: 400px;
     margin: 25%;
     border-radius: 5%;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
     margin: 25%;
     flex: 1 0 auto;
-    
+
 }
 
+#initials,
+#final_score {
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    font-size: 150%;
+    flex: 1 0 auto;
+
+}
+
+#current_question {
+    padding-bottom: 20px;
+}
