@@ -46,7 +46,6 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 40%;
 }
 
 #submit,
@@ -118,17 +117,22 @@ h4{
     box-shadow: 0 0 10px 2px;
     margin: 25%;
     flex: 1 0 auto;
-
 }
 
-#initials,
+/* #initials, */
 #final_score {
     display: flex;
     justify-content: center;
-    padding: 3%;
     font-size: 150%;
     flex: 1 0 auto;
+}
 
+#initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    margin: 0 auto; 
 }
 
 #current_question {
