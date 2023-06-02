@@ -39,13 +39,13 @@ To use this Code Quiz application, follow these steps:
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
+[Screenshot 1](screenshots/screenshot1.png)
 *Quiz interface with a question and options.*
 
-![Screenshot 2](screenshots/screenshot2.png)
+[Screenshot 2](screenshots/screenshot2.png)
 *Quiz completed, prompting for initials to save the score.*
 
-![Screenshot 3](screenshots/screenshot3.png)
+[Screenshot 3](screenshots/screenshot3.png)
 *Highscores page showing the saved scores.*
 
 ## Technologies
